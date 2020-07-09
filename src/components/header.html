@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="apple-touch-icon" href="<%= require('../images/logo.png') %>">
+    <link rel="Shortcut Icon" href="<%= require('../images/logo.png') %>" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="application-name" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <title><%= title %></title>
+    <!--[if lt IE 10]>
+        <script src="<%= require('!file-loader?esModule=false&name=assets/[name].[ext]!html5shiv') %>"></script>
+        <script src="<%= require('!file-loader?esModule=false&name=assets/[name].[ext]!xdomain') %>" slave="proxy.html"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 9]>
+    <script src="<%= require('!file-loader?esModule=false&name=assets/[name].[ext]!respond') %>"></script>
+<![endif]-->
+<header class="header">
+    <nav class="nav">
+        <a href="other.html">来吧这里是other</a>
+        <a href="other2.html">来吧这里是other2</a>
+        <a href="other3.html">来吧这里是other3</a>
+    </nav>
+</header>
