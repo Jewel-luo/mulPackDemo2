@@ -1,3 +1,4 @@
+import './serviceWorker';
 import '../scss/index.scss';
 
 new Promise((resolve,reject) => {

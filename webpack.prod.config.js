@@ -1,6 +1,8 @@
 const baseConfig = require('./webpack.base.config');
 const merge = require('webpack-merge');
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = merge(baseConfig, {
     mode: 'production',
@@ -16,5 +18,15 @@ module.exports = merge(baseConfig, {
             },
             canPrint: true
         }),
+        new ManifestPlugin({
+            fileName: 'asset-manifest.json',
+        }),
+        new SWPrecacheWebpackPlugin({
+            dontCacheBustUrlsMatching: /\.\w{8}\./,
+            filename: 'service-worker.js',
+            minify: true,
+            navigateFallback: '/index.html',
+            staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+        })
     ]
 })
